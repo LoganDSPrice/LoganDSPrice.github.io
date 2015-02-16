@@ -16,6 +16,39 @@
     </nav>
     <section>
             <div class = "sidebar">
+                <h2>2/15/2015</h2></div>
+            <div class = "main-content">
+              <h1>Margins v. Borders v. Padding</h1>
+                <p>
+                  Every object (e.g. 'div', 'p', 'section') has four attributes that can be modified that will affect size and spacing of the object. They are margin, borders, padding, and the content itself. Below is a diagram:
+                </p>
+                <p><img src="imgs/objectbox.png">
+                </p>
+                <p>
+                  You have the content (in blue) with the padding wrapped around it, followed by the border wrapped around the padding, followed by the margin wrapped around the border. You can adjust the size of all of these idividually as well as adjusting a single side of each part.
+                </p>
+                <p>
+                  I personally like to group the four together as content-border and padding-margin. You can manipulate the color of the content and the border while padding and margin create space between their surroundings (padding creates space between the content and the border while while margin creates space between the border and another object).
+                </p>
+                <p>
+                  Manipulating each of these is extremely easy in CSS. Within the code for your given selector, you can use "margin: 20px;" to give the entire margin a size of 20 pixels. If you wanted to only assign a size of the left margin you would use "margin-left: 20px;". You can replace "left" with "right", "top", or "bottom" to adjust each of those individually. Adjust the padding of any object by replacing "margin" with "padding" in any of the previous examples.
+                </p>
+                <p>
+                  You can adjust many attributes of the content. Use "color: red;" to change the text color of the object to red.
+                </p>
+                <p>
+                  To change the background color of the object to gray, use "background-color: gray;"
+                </p>
+                <p>
+                  Use "width: 200px; height: 450px" to make the content of the object 200 pixels wide by 450 pixels high. However sometimes you want to make the object a dynamic size that adjusts to the size of the browser window and an example of that would be "width: 50%;"
+                </p>
+                <p>
+                  Borders are another attribute of an object that can appear so you can change such things about them as color, size, dashed/solid, etc. To create a solid, orange, 5 pixel wide border around your object, you would use "border: 5px solid orange". You can replace "solid" with "dashed" and "orange" with many color names or, alternatively, their hex code (e.g. #00ffa3).
+                </p>
+                <p> Similar to margins and padding, you can alter a single side of a border by using "border-left", "border-right", "border-top", or "border-bottom".
+                </p>
+            </div>
+            <div class = "sidebar">
                 <h2>2/8/2015</h2></div>
             <div class = "main-content">
               <h1>Initial Thoughts on Dev Bootcamp</h1>
