@@ -1,6 +1,7 @@
 html {
-  font-family: Courier;
+  font-family: Georgia;
   color: white;
+  line-height: 1.5;
 }
 nav {
   font-size: 1.5em;
@@ -56,10 +57,9 @@ nav {
 
 section {
   position: relative;
-  left: 25%;
-  right: 25%;
+  /*left: 25%;
+  right: 25%;*/
   top: 100px;
-  width: 50%;
   text-align:center;
 }
 
@@ -87,4 +87,14 @@ a:link {
 
 a:visited {
   color: white;
+}
+
+table {
+  border:1px solid black;
+}
+
+td {
+  border:1px solid black;
+  padding:.2em;
+  text-align: right;
 }

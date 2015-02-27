@@ -10,38 +10,67 @@
     <nav>
       <div id="About"><a href="#">About</a></div>
       <div id="Portfolio"><a href="#">Portfolio</a></div>
-      <div id="Home"><a href="index.html">Home</a></div>
-      <div id="Blog"><a href="blog.html">Blog</a></div>
+      <div id="Home"><a href="../index.html">Home</a></div>
+      <div id="Blog"><a href="../blog.html">Blog</a></div>
       <div id="Contact"><a href="#">Contact</a></div>
     </nav>
   <section>
     <div class = "sidebar">
       <h2>2/22/2015</h2></div>
     <div class = "main-content">
-    <h1>Title of Post</h1>
+    <h1>Fun with Data Sets</h1>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          So far in our education of Ruby we’ve been able to set variables to store data but what if you have a lot of data that could/should be organized into sets? Having a bunch of variables would be a pain the butt. Both arrays and hashes are objects that are collections of data. Creating and manipulating arrays and hashes are very similar, however there are distinct differences in the structure of each, which leads to different uses. First we'll take a look at how to create each.
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <br>
+          <b>The following are ways to create empty arrays and hashes (called my_array and my_hash respectively):</b>
+        </p>
+        <p class = "code">
+          my_array = []<br>
+          my_array = Array.new<br>
+          <br>
+          hash = {}<br>
+          hash = hash.new
         </p>
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <br>
+          <b>You can also create new arrays and hashes with data:</b>
+        </p>
+        <p class="code">
+          my_array = [1, 4.5, [‘a’,’b’,’c’], ‘I love ham’]<br>
+          <br>
+          <ul type=none class="code">
+            <li>my_hash = {</li>
+            <ul type=none>
+              <li>"make"  => "Chevy",</li>
+              <li>"model" => "Impala",</li>
+              <li>"year"  => 2009,</li>
+              <li>"color" => "Silver"}</li>
+            </ul>
+          </ul>
+        </p>
+        <p>
+          As evidenced above, arrays and hashes can be populated with integers, floats, strings, and even other objects (like more arrays or hashes!). Also, a quick glance at how the data was entered into each should reveal that the structures of an array and a hash are different. An array is essentially an indexed list where the first item in the list receives an index of 0 and each successive item's index increases by 1. So in my_array, 1 would have an index of 0 and 'I love ham' would have an index of 3. Why does the index start with 0? Because computers are weird. Meanwhile, a hash is a collection of pairs of data (a key and a value). The keys in my_hash are "make", "model", "year", and "color" and their respective values are "Chevy", "Impala", 2009, and "Silver".
+        </p>
+        <p>
+          <br><b>Let's call specific items in an array and a hash:</b>
+        </p>
+        <p class="code">
+          my_array[0] ........................... results in 1<br>
+          my_array[2] ........................... results in 4.5<br>
+          <br>
+          my_hash["make"] ....................... results in "Chevy"<br>
+          my_hash["year"] ....................... results in 2009
+        </p>
+        <p>
+          So to call an item in an array, you need to know where in the array it lies. To call the fourth item, you would type <font color ="black" face="Courier">my_array[3]</font>. In a hash, you call a value by its key. So in my_hash, typing <font color ="black" face="Courier">my_hash["color"]</font> would call "Silver".
+        </p>
+        <p>
+          The different structures of arrays and hashes gives them different uses. If you just need to store a bunch of items and don't need to categorize them, arrays are great. They also have many more compatible methods than hashes. Hashes make categorized data much easier to retrieve. You don’t have to remember where in the hash the data is. You can just call for the model of your car and you’ll get back ‘Impala’, which is much more intuitive. A hash's keys can also give context to its values.
+        </p>
+        <p>
+          Think about the purpose of your data and your choice of either array or hash will come to you!
         </p>
     </div>
   </section>
