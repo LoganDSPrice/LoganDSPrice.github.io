@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html class="Blog">
+  <head>
+    <title>Log and Sprice - Home</title>
+    <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  </head>
+  <body>
+    <nav>
+      <div id="About"><a href="#">About</a></div>
+      <div id="Portfolio"><a href="#">Portfolio</a></div>
+      <div id="Home"><a href="../index.html">Home</a></div>
+      <div id="Blog"><a href="../blog.html">Blog</a></div>
+      <div id="Contact"><a href="#">Contact</a></div>
+    </nav>
+  <section>
+    <div class = "sidebar">
+      <h2>3/1/2015</h2></div>
+    <div class = "main-content">
+    <h1>Groupin' Stuff!</h1>
+        <p>The .group_by method can be a valuable enumberable method to organize items in an array. It takes an array input and will return a hash with the items grouped together as the value and the keys will be however you want your array sorted.
+        </p>
+        <p>
+          I think a very simple way to demonstrate .group_by is to try to organize an array of strings by how long each string is. This is how it would be done:
+        </p>
+        <p class = "code">
+          array = ['apple', 'bear', 'cat', 'horse', 'house', 'barfing', 'salmon']<br>
+          hash = a.group_by {|x| x.length}
+          puts hash
+        </p>
+        <p>
+          The output is the following:
+        </p>
+        <p class ="code">
+          {5=>["apple", "horse", "house"],<br>
+          4=>["bear"],<br>
+          3=>["cat"],<br>
+          7=>["barfing"],<br>
+          6=>["salmon"]}
+        </p>
+        <p>
+          Let's take a look at our input and then what was returned.
+        </p>
+        <p>
+          When calling the .group_by method, as with many enumberable methods, you have to define the element reference between pipes (||). In the input above, we set it to x. What comes after it is a block to be evaluated. This is how you want to group the items in your array. The results of the block will be set as the keys in the hash and the values will be all the items of the array that fit that key. In our example, we wanted to group the items by how long each string was so we used x.length to evaluate the keys. If we wanted to group them by first letter, we would have put x[0]  as the block instead of x.length.
+        </p>
+        <p>
+          Looking at the results, .group_by created a hash with unique keys evaluated by running the block of code on each item in the array. Then each item that resulted in the same key is put in an array which is set to that key's value.
+        </p>
+        <p>
+          I can imagine that you can get pretty clever with the block of logic for the .group_by to figure out a whole lot of ways to group items in an array... I just haven't had that much experience with it yet. I look forward to using it more and keeping it in my arsenal of ruby methods!
+        </p>
+    </div>
+  </section>
+  <footer>©Logan Price 2015</footer>
+  </body>
+</html>
